@@ -1,6 +1,6 @@
 package com.silverhetch.herse.model
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
