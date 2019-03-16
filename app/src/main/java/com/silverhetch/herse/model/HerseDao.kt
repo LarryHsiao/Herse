@@ -9,7 +9,13 @@ import androidx.room.Transaction
 @Dao
 interface HerseDao {
     @Query("select * from events;")
-    fun allEvent(): List<Event>
+    fun allEvent(): List<EventWithMeta>
+
+    @Query("select * from event_meta;")
+    fun allMeta(): List<Meta>
+
+    @Query("select * from events where id = :id ;")
+    fun eventById(id: Long) : EventWithMeta
 
     @Transaction
     fun newEvent(event: Event, vararg meta: Meta) {

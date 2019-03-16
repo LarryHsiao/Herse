@@ -10,7 +10,7 @@ data class Meta(
     @ColumnInfo(name = "event_id") var eventId: Long,
     @ColumnInfo var start: Long,
     @ColumnInfo var interval: Long,
-    @ColumnInfo var year: Long,
+    @ColumnInfo var year: Int,
     @ColumnInfo var month: Int,
     @ColumnInfo var day: Int,
     @ColumnInfo var week: Int,
